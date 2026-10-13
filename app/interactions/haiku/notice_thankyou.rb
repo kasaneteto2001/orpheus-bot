@@ -6,7 +6,7 @@ module Haiku
 
     checklist do
       message_text_matches /thank\s*you|thanks|tanx|thx|ty/i # regex is hard
-      message_text_matches /(?i).*(orph|opreus).*/i
+      message_text_matches /(?i).*(orph|opreus|morpheus).*/i # it's morphin time
       check do |event|
         event[:thread_ts].present? && cache.read("haikued_#{event[:thread_ts]}").present?
       end
